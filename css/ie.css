@@ -1,0 +1,10 @@
+/* PIE */
+#slide_superior{behavior: url(css/PIE.htc);}
+.logos_enlaces_items{behavior: url(css/PIE.htc);}
+#bienvenida{behavior: url(css/PIE.htc);}
+.sf-menu-principal{behavior: url(css/PIE.htc);}
+.sf-menu-principal li a.sfmp-ini:hover{behavior: url(css/PIE.htc);}
+.sf-menu-principal li a.sfmp-fin:hover{behavior: url(css/PIE.htc);}
+.sf-menu{behavior: url(css/PIE.htc);}
+.sf-menu li a.sfmp-ini:hover{behavior: url(css/PIE.htc);}
+.sf-menu li a.sfmp-fin:hover{behavior: url(css/PIE.htc);}
