@@ -2,8 +2,7 @@ var jefform = jQuery.noConflict();
 jefform(document).ready(function(){
 	jefform(".fc_enviar").click(function() {
 		
-		var institucion_rubro = jefform("#fc_institucion_rubro").val();
-			institucion_nombre = jefform("#fc_institucion_nombre").val();
+		var institucion_nombre = jefform("#fc_institucion_nombre").val();
 			institucion_futuro = jefform("#fc_institucion_futuro").val();
 			institucion_objetivos = jefform("#fc_institucion_objetivos").val();
 			institucion_descripcion = jefform("#fc_institucion_descripcion").val();
@@ -16,11 +15,7 @@ jefform(document).ready(function(){
 			participante_participacion = jefform("#fc_participante_participacion").val();		
 			validacion_email = /^[a-zA-Z0-9_\.\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$/;
 			
-		if (institucion_rubro == "") {
-		    jefform("#fc_institucion_rubro").focus();
-			jefform("#fc_institucion_rubro").addClass("error-iptx1");
-		    return false;
-		}else if (institucion_nombre == "") {
+		if (institucion_nombre == "") {
 		    jefform("#fc_institucion_nombre").focus();
 			jefform("#fc_institucion_nombre").addClass("error-iptx1");
 		    return false;
@@ -66,8 +61,7 @@ jefform(document).ready(function(){
 		    return false;
 		}else {
 			jefform('.imagen').removeClass('ocultar');
-			var datos = 'institucion_rubro='+ institucion_rubro + 
-						'&institucion_nombre='+ institucion_nombre + 
+			var datos = 'institucion_nombre='+ institucion_nombre + 
 						'&institucion_futuro='+ institucion_futuro + 
 						'&institucion_objetivos='+ institucion_objetivos + 
 						'&institucion_descripcion='+ institucion_descripcion + 

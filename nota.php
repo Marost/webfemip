@@ -51,7 +51,15 @@ if($num_noticia>0){
 <meta charset="utf-8">
 <title><?php echo $noticia_titulo; ?></title>
 <base href="<?php echo $web; ?>">
-<link rel="image_src" href="<?php echo $web."imagenes/upload/".$noticia_imagen_carpeta."".$noticia_imagen; ?>" >
+<meta property="og:title" content="<?php echo $noticia_titulo; ?>" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="<?php echo $urlweb; ?>" />
+<meta property="og:image" content="<?php echo $web."imagenes/upload/".$noticia_imagen_carpeta."".$noticia_imagen; ?>" />
+<meta property="og:image:width" content="140" />
+<meta property="og:image:height" content="140" />
+<meta property="og:description" content="<?php echo soloDescripcion($noticia_contenido); ?>" />
+<meta property="og:site_name" content="<?php echo $web_nombre; ?>" />
+<meta property="fb:admins" content="1376286793" />
 
 <?php require_once("header-scripts.php"); ?>
 

@@ -5,7 +5,7 @@ include("panel@femip/conexion/conexion.php");
 $script_estilos=true;
 $script_fonts=true;
 $script_ie=true;
-$script_form_inscripcion=true;
+$script_form_inscripcion_japon=true;
 $script_galeria_femip=true;
 
 //WIDGETS
@@ -68,27 +68,7 @@ $wg_encuesta=true;
                 </div>
                 
                 <form method="post" id="form_japon">
-                  <fieldset class="sin_borde">
-                    <label for="fc_institucion_rubro">Rubro de su Institución</label>
-                      <select name="fc_institucion_rubro" id="fc_institucion_rubro">
-                        <option value="Autos" selected>Autos</option>
-                        <option value="Belleza y Relajación">Belleza y Relajación</option>
-                        <option value="Diversión">Diversión</option>
-                        <option value="Educación">Educación</option>
-                        <option value="Hogar">Hogar</option>
-                        <option value="Hospitales y farmacias">Hospitales y farmacias</option>
-                        <option value="Inmuebles">Inmuebles</option>
-                        <option value="Instrumentos Musicales">Instrumentos Musicales</option>
-                        <option value="Maquinaria">Maquinaria</option>
-                        <option value="Oficinas">Oficinas</option>
-                        <option value="Regalos">Regalos</option>
-                        <option value="Salud">Salud</option>
-                        <option value="Servicios financieros">Servicios financieros</option>
-                        <option value="Viajes y Hoteles">Viajes y Hoteles</option>
-                        <option value="Otros">Otros</option>
-                      </select>
-                    </fieldset>
-                    
+                                      
                     <fieldset class="sin_borde">
                       <label for="fc_institucion_nombre">Nombre de su Institución</label>
                         <input class="inputtext1" name="fc_institucion_nombre" id="fc_institucion_nombre" size="50" />

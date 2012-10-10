@@ -394,4 +394,14 @@ function queryTags($idtag, $tabla, $conexion){
 	return $fila_query=mysql_fetch_array($rst_query);
 }
 
+function soloDescripcion($texto){
+	$b_superior="</p>";
+	$e_parrafo="<p>";
+	if(ereg($b_superior, $texto)){
+		$total=explode($b_superior, $texto);
+		$parrafo=explode($e_parrafo,$total[0]);
+		return $parrafo[1];
+	}
+}
+
 ?>

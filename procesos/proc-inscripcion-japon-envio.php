@@ -15,8 +15,7 @@ $participante_email=$_POST["participante_email"];
 $participante_cargo=$_POST["participante_cargo"];
 $participante_participacion=$_POST["participante_participacion"];
 
-mysql_query("INSERT INTO fmp_inscripcion_japon (institucion_rubro, 
-institucion_nombre, 
+mysql_query("INSERT INTO fmp_inscripcion_japon (institucion_nombre, 
 institucion_futuro, 
 institucion_objetivos, 
 institucion_descripcion, 
@@ -26,8 +25,7 @@ participante_nombre,
 participante_apellidos, 
 participante_email, 
 participante_cargo,
-participante_participacion) VALUES ('$institucion_rubro', 
-'$institucion_nombre', 
+participante_participacion) VALUES ('$institucion_nombre', 
 '$institucion_futuro',
 '$institucion_objetivos', 
 '$institucion_descripcion', 
@@ -48,7 +46,6 @@ $body = '<!DOCTYPE HTML> <html lang="es"> <head> <meta charset="utf-8">
 </head>
 <body>
 <h2>Inscripción - V Convención FEMIP- Tokio</h2>
-<p><strong>Rubro de su Institución:</strong> '.$institucion_rubro.'</p>
 <p><strong>Nombre de su Institución:</strong> '.$institucion_nombre.'</p>
 <p><strong>¿Hacia dónde apunta su institución en el futuro?:</strong> <br/>'.$institucion_futuro.'</p>
 <p><strong>¿Cuáles son los objetivos que se basa su institución para llegar a dónde desean llegar?:</strong> <br/>'.$institucion_objetivos.'</p>

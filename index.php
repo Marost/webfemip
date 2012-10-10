@@ -8,15 +8,13 @@ $script_fonts=true;
 $script_ie=true;
 $script_slider=true;
 $script_menu_principal=true;
-$script_popup=true;
 $script_video=true;
 
 //NOTICIAS
-$rst_noticias=mysql_query("SELECT * FROM fmp_noticia WHERE id>0 ORDER BY fecha_publicacion DESC LIMIT 4;", $conexion);
+$rst_noticias=mysql_query("SELECT * FROM fmp_noticia WHERE id>0 ORDER BY fecha_publicacion DESC LIMIT 8;", $conexion);
 
 //EVENTOS
-$rst_eventos=mysql_query("SELECT * FROM fmp_evento WHERE id>0 ORDER BY fecha_publicacion DESC LIMIT 1;", $conexion);
-$fila_eventos=mysql_fetch_array($rst_eventos);
+$rst_eventos=mysql_query("SELECT * FROM fmp_evento WHERE id>0 ORDER BY fecha_publicacion DESC LIMIT 2;", $conexion);
 
 ?>
 <!DOCTYPE HTML>
@@ -46,12 +44,18 @@ $fila_eventos=mysql_fetch_array($rst_eventos);
                 </div><!-- FIN SECTION DERECHA PRINCIPAL ITEM CABECERA-->
                 
                 <div class="sctpipri_contenido">
-                
+                	
+                    <?php while($fila_eventos=mysql_fetch_array($rst_eventos)){ ?>
+                    <section>
+                    
                 	<a href="evento/<?php echo $fila_eventos["url"] ?>" title="<?php echo $fila_eventos["titulo"]; ?>">
                 	<img src="imagenes/upload/<?php echo $fila_eventos["carpeta_imagen"]."".$fila_eventos["imagen"]; ?>" width="500" alt="<?php echo $fila_eventos["titulo"]; ?>"></a>
                     
                     <p><a href="evento/<?php echo $fila_eventos["url"] ?>">
 					<?php echo $fila_eventos["titulo"]; ?></a></p>
+                    
+                    </section>
+                    <?php } ?>
                     
                 </div><!-- FIN SECTION DERECHA PRINCIPAL ITEM CONTENIDO-->
             	
